@@ -5,8 +5,9 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-
     public TextMeshProUGUI scoreText;
+
+
 
     // Use this for initialization
     void Start () {

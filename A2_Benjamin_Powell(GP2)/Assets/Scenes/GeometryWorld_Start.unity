@@ -352,7 +352,6 @@ GameObject:
   - component: {fileID: 592568572}
   - component: {fileID: 592568571}
   - component: {fileID: 592568570}
-  - component: {fileID: 592568569}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -360,18 +359,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &592568569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 592568568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1845eead4ace894a9946f216dc42e80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1036760581}
 --- !u!114 &592568570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,6 +857,31 @@ Prefab:
       propertyPath: whatIsGround.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 1250566118398584, guid: e7d9a46937fc8c145a0796ee09508d23, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518364698790504, guid: e7d9a46937fc8c145a0796ee09508d23, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843536369627288, guid: e7d9a46937fc8c145a0796ee09508d23, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1508229602726990, guid: e7d9a46937fc8c145a0796ee09508d23, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432668598300876, guid: e7d9a46937fc8c145a0796ee09508d23, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579783375133058, guid: e7d9a46937fc8c145a0796ee09508d23,
+        type: 2}
+      propertyPath: whatIsGround.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7d9a46937fc8c145a0796ee09508d23, type: 2}
   m_IsPrefabAsset: 0
@@ -883,7 +895,7 @@ GameObject:
   - component: {fileID: 1386104905}
   - component: {fileID: 1386104904}
   - component: {fileID: 1386104906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform_5(Square)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
