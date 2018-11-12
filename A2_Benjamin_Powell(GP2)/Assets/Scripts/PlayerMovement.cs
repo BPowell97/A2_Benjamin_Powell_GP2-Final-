@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 	void Update ()
     {
         HandleInput();
+
 	}
 
     private void FixedUpdate()
@@ -60,11 +61,33 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
 
-        if (isGrounded && jump)
+        //if ((isGrounded && jump) && Input.GetKeyDown(KeyCode.Space))
+        {
+            //myRigidbody.AddForce(new Vector2(0, jumpForce));
+            //jump = true;
+
+            //if (!jump && !isGrounded)
+                //jump = true;
+        }
+
+        if (jump && isGrounded)
+        {
+            //isGrounded = false;
+            myRigidbody.AddForce(new Vector2(0, jumpForce));
+        }
+
+        if (!jump && !isGrounded)
+        {
+            //jump = true;
+            isGrounded = true;
+            myRigidbody.AddForce(new Vector2(0, jumpForce * 0));
+        }
+
+        /*if (isGrounded && jump)
         {
             isGrounded = false;
             myRigidbody.AddForce(new Vector2(0, jumpForce));
-        }
+        }*/
 
     }
 
