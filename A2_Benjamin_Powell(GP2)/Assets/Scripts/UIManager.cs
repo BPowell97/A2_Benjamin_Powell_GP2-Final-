@@ -5,17 +5,29 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance;
     public TextMeshProUGUI scoreText;
 
-
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+
+    public void UpdateScore()
+    {
+        scoreText.text = "Score: <color=white>" + GameManager.Instance.score.ToString();
+    }
 }

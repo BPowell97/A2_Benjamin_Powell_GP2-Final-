@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsGround;
 
+    [SerializeField]
     private bool isGrounded;
 
     private bool jump;
@@ -74,9 +75,10 @@ public class PlayerMovement : MonoBehaviour
         {
             //isGrounded = false;
             myRigidbody.AddForce(new Vector2(0, jumpForce));
+            jump = false; // stops player from jumping repeatively
         }
 
-        if (!jump && !isGrounded)
+        else//(!jump && !isGrounded)
         {
             //jump = true;
             isGrounded = true;
@@ -111,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (colliders[i].gameObject != gameObject)
                     {
+                        //Debug.Log(colliders[i].gameObject.name);
                         return true;
                     }
                 }

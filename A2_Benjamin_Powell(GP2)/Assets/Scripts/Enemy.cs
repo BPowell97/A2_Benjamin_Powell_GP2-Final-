@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-    public GameObject deathEffect;     //downloaded sprite effect
+    public int scoreValue = 10;  // amount if score recieved on enemies death
+    public GameObject deathEffect;     // downloaded sprite effect
 
     public void TakeDamage (int damage)  // takedamage will be accessible in bullet script
     {
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
+        GameManager.Instance.AddScore(scoreValue);
         Destroy(gameObject);
     }
 

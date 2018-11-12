@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     private int _numCoins;
+    public int score = 0;
 
     public int NumCoins
     {
@@ -14,12 +15,25 @@ public class GameManager : Singleton<GameManager>
 
 
     // Use this for initialization
-    void Start () {
-		
+    private void Start ()
+    {
+        score = 0;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    void Die()
+    {
+        AddScore(10);
+    }
+
+    public void AddScore(int newScore)
+    {
+        score += newScore;
+        UIManager.Instance.UpdateScore();
+    }
 }
