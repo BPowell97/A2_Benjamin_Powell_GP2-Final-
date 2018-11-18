@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public Animator animator;
     private Rigidbody2D myRigidbody;
 
     [SerializeField]
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
 
     private bool jump;
+    //private bool crouch;
 
     //private bool facingRight = true;
 
@@ -39,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+     
+
         HandleInput();
 
 	}
@@ -90,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
             myRigidbody.AddForce(new Vector2(0, jumpForce));
         }*/
-
+        
     }
 
     private void HandleInput()
@@ -99,7 +103,22 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
         }
+
+        /*if (Input.GetKeyDown(KeyCode.F))
+        {
+            crouch = true;
+        }
+        else
+        {
+            crouch = false;
+        }*/
     }
+
+    /*public void OnCrouching (bool isCrouching)
+    {
+        
+        animator.SetBool("IsCrouching", isCrouching);
+    }*/
 
     private bool IsGrounded()
     {

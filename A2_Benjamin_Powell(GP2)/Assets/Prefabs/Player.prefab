@@ -24,7 +24,8 @@ GameObject:
   - component: {fileID: 50677896454852030}
   - component: {fileID: 114767797837664512}
   - component: {fileID: 114579783375133058}
-  m_Layer: 0
+  - component: {fileID: 95412409397327332}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -39,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4912204139423202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4836530637546668}
   - component: {fileID: 58902415511213576}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground Point (L)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4397601525085510}
   - component: {fileID: 58798908505576440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground Point (M)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4353006530589022}
   - component: {fileID: 58283192601626262}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground Point (R)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,6 +254,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.3, y: 5.3}
   m_EdgeRadius: 0
+--- !u!95 &95412409397327332
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250566118398584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 507f83437e6af314c843bcd23d035673, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114579783375133058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fa22cad44355745b84c07b9f4d5cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 95412409397327332}
   movementSpeed: 5
   groundPoints:
   - {fileID: 4397601525085510}
@@ -272,8 +292,9 @@ MonoBehaviour:
   groundRadius: 0.2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 512
-  jumpForce: 225
+    m_Bits: 256
+  isGrounded: 0
+  jumpForce: 400
 --- !u!114 &114767797837664512
 MonoBehaviour:
   m_ObjectHideFlags: 1
