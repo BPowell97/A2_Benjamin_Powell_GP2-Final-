@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D rb;
     public int damage = 40;
+    public int playerDamage = 10;
 
 	// Use this for initialization
 	void Start ()
@@ -22,5 +23,15 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
         }
         Destroy(gameObject);
+
+        {
+            Player player = hitInfo.GetComponent<Player>(); //player shooting mechanics not set up
+            if (player != null)
+            {
+                player.PlayerTakeDamage(damage);
+            }
+            Destroy(gameObject);
+        }
     }
+
 }
