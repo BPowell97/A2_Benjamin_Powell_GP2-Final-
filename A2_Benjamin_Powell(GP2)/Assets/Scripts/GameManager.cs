@@ -6,13 +6,12 @@ public class GameManager : Singleton<GameManager>
 {
     private int _numCoins;
     public int score = 0;
-
+    
     public int NumCoins
     {
         get { return _numCoins; }
         set { _numCoins = value; }
     }
-
 
     // Use this for initialization
     private void Start ()

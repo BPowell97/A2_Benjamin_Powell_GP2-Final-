@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
 
     private bool jump;
+
+    public GameObject winPanel;
+    public GameObject losePanel;
     //private bool crouch;
 
     //private bool facingRight = true;
@@ -144,4 +147,18 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }*/
 
+    void Finish()
+    {
+        myRigidbody.bodyType = RigidbodyType2D.Static;
+        winPanel.SetActive(true);
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "portal")
+        {
+            Finish();
+        }
+    }
 }
