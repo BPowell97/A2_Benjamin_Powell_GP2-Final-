@@ -154,11 +154,23 @@ public class PlayerMovement : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void Lose()
+    {
+        myRigidbody.bodyType = RigidbodyType2D.Static;
+        losePanel.SetActive(true);
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Portal")
         {
             Finish();
+        }
+
+        if (col.tag == "Saw")
+        {
+            Lose();
         }
     }
 }

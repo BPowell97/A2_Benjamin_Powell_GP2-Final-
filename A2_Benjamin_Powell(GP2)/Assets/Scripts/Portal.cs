@@ -12,7 +12,7 @@ public class Portal : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         portal.transform.Rotate(new Vector3(0f, 0f, 3f));
 	}
