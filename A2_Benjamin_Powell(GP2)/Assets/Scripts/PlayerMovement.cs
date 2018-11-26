@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject losePanel;
     //private bool crouch;
 
-    //private bool facingRight = true;
+    private bool facingRight = true;
 
     [SerializeField]
     private float jumpForce;
@@ -141,11 +141,22 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    /*private void Flip()
+    private void Flip()
     {
         facingRight = !facingRight;
-        transform.Rotate(0f, 180f, 0f);
-    }*/
+        transform.eulerAngles = new Vector3(0, -180, 0);
+        /*if (facingRight)
+        {
+            facingRight = false;
+            transform.eulerAngles = new Vector3(0, -180, 0);
+        }
+        //transform.eulerAngles = new Vector3(0, -180, 0);
+        else
+        {
+            facingRight = true;
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }*/
+    }
 
     void Finish()
     {
