@@ -65,7 +65,14 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMovement(float horizontal)
     {
         myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
-
+        if (horizontal < -0.1f)
+        {
+            Flip(true);
+        }
+        else if (horizontal > 0.1f)
+        {
+            Flip(false);
+        }
         //if ((isGrounded && jump) && Input.GetKeyDown(KeyCode.Space))
         {
             //myRigidbody.AddForce(new Vector2(0, jumpForce));
@@ -141,11 +148,12 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    private void Flip()
+    private void Flip(bool facingRight)
     {
-        facingRight = !facingRight;
-        transform.eulerAngles = new Vector3(0, -180, 0);
-        /*if (facingRight)
+        //facingRight = !facingRight;
+        //transform.eulerAngles = new Vector3(0, -180, 0);
+
+        if (facingRight)
         {
             facingRight = false;
             transform.eulerAngles = new Vector3(0, -180, 0);
@@ -154,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
         {
             facingRight = true;
             transform.eulerAngles = new Vector3(0, 0, 0);
-        }*/
+        }
     }
 
     void Finish()
