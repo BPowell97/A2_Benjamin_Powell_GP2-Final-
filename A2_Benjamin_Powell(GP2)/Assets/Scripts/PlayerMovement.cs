@@ -150,7 +150,6 @@ public class PlayerMovement : MonoBehaviour
             facingRight = false;
             transform.eulerAngles = new Vector3(0, -180, 0);
         }
-        //transform.eulerAngles = new Vector3(0, -180, 0);
         else
         {
             facingRight = true;

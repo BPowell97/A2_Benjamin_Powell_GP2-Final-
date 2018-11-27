@@ -14,6 +14,8 @@ public class Coin : MonoBehaviour
     private float startingY;
     private bool isMovingUp = true;
 
+    public int coinValue = 20; //Added score value shen you pickup coin
+
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -26,6 +28,7 @@ public class Coin : MonoBehaviour
     private void Pickup()
     {
         GameManager.Instance.NumCoins++;
+        GameManager.Instance.AddScore(coinValue); //Access to GameManager Script
         Destroy(gameObject);
     }
 
