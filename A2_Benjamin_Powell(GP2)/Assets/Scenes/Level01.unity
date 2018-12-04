@@ -525,6 +525,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &289237128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1282402354286540, guid: b409f6c52774b63498d8599e611ba79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 875751006}
+--- !u!114 &289237129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289237128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a951e46ca6522f14c9318ca1f3c0719d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFirePoint: {fileID: 2145431759}
+  bulletPrefab: {fileID: 1539632861300792, guid: 96ae8f9dd8fd89941bc4d858375f035b,
+    type: 2}
+  isEnemy: 1
 --- !u!1 &341376147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,3 +3489,8 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.5, y: 0}
   - {x: 0.5, y: 0}
+--- !u!4 &2145431759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4443137268971754, guid: b409f6c52774b63498d8599e611ba79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 875751006}

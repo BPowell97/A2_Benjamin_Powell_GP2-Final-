@@ -177,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.bodyType = RigidbodyType2D.Static;
         losePanel.SetActive(true);
         Destroy(gameObject);
+        GameManager.Instance.score = 0;   //when player dies score resets to 0
     }
 
     private void OnTriggerEnter2D(Collider2D col)

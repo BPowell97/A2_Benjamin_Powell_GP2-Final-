@@ -6,9 +6,18 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-	
-	// Update is called once per frame
-	void Update ()
+    //public bool isEnemy;
+
+    /*void Start()
+    {
+        if (isEnemy)
+        {
+            StartCoroutine(ShootDelay());
+        }
+    }*/
+
+    // Update is called once per frame
+    void Update ()
     {
 		if (Input.GetButtonDown("Fire1"))
         {
@@ -20,4 +29,13 @@ public class Weapon : MonoBehaviour
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
+
+    /*private IEnumerator ShootDelay()
+    {
+        int rnd = Random.Range(1, 4);
+        yield return new WaitForSeconds(rnd);
+        Shoot();
+        StartCoroutine(ShootDelay());
+    }*/
+
 }

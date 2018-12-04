@@ -24,14 +24,13 @@ public class Bullet : MonoBehaviour
         }
         Destroy(gameObject);
 
+        Player player = hitInfo.GetComponent<Player>(); //player shooting mechanics not set up
+        if (player != null)
         {
-            Player player = hitInfo.GetComponent<Player>(); //player shooting mechanics not set up
-            if (player != null)
-            {
-                player.PlayerTakeDamage(damage);
-            }
-            Destroy(gameObject);
+            player.PlayerTakeDamage(damage);
         }
+        Destroy(gameObject);
+        
     }
 
 }
