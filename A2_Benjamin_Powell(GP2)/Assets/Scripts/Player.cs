@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public int health = 100;
-    
-    
-    
+    public GameObject losePanel;
+    private Rigidbody2D myRigidbody;
+
     public void PlayerTakeDamage (int playerDamage)
     {
         health -= playerDamage;
@@ -19,6 +19,8 @@ public class Player : MonoBehaviour {
 
     void Die()
     {
+        //myRigidbody.bodyType = RigidbodyType2D.Static;
+        losePanel.SetActive(true);
         Destroy(gameObject);
     }
     

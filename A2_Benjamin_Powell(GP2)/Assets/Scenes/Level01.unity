@@ -519,7 +519,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 246228830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46, y: -1.3, z: 0}
+  m_LocalPosition: {x: 51.87, y: -1.3, z: 0}
   m_LocalScale: {x: 5.026701, y: 4.726914, z: 1.3963058}
   m_Children: []
   m_Father: {fileID: 0}
@@ -544,7 +544,6 @@ MonoBehaviour:
   enemyFirePoint: {fileID: 2145431759}
   bulletPrefab: {fileID: 1539632861300792, guid: 96ae8f9dd8fd89941bc4d858375f035b,
     type: 2}
-  isEnemy: 1
 --- !u!1 &341376147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2337,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4365545131101116, guid: b409f6c52774b63498d8599e611ba79d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 45
+      value: 50.87
       objectReference: {fileID: 0}
     - target: {fileID: 4365545131101116, guid: b409f6c52774b63498d8599e611ba79d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2600,6 +2599,11 @@ Prefab:
       propertyPath: losePanel
       value: 
       objectReference: {fileID: 877875288}
+    - target: {fileID: 114172098991858038, guid: e7d9a46937fc8c145a0796ee09508d23,
+        type: 2}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 877875288}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7d9a46937fc8c145a0796ee09508d23, type: 2}
   m_IsPrefabAsset: 0
@@ -2845,13 +2849,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1429954975}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 37.82, y: -1.98, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.49923483, w: 0.86646676}
+  m_LocalPosition: {x: 40.56, y: -2.77, z: 0}
   m_LocalScale: {x: 6.283376, y: 4.726914, z: 1.3963058}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 59.899002}
 --- !u!1 &1469374217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +3184,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4117760251466990, guid: c1e919c7ac882024e8faa247af105691, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 50.03
+      value: 55.899998
       objectReference: {fileID: 0}
     - target: {fileID: 4117760251466990, guid: c1e919c7ac882024e8faa247af105691, type: 2}
       propertyPath: m_LocalPosition.y

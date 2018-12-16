@@ -6,14 +6,12 @@ public class EnemyWeapon : MonoBehaviour {
 
     public Transform enemyFirePoint;
     public GameObject bulletPrefab;
-    public bool isEnemy;
+    //public bool isEnemy;
 
     void Start()
     {
-        if (isEnemy)
-        {
-            StartCoroutine(ShootDelay());
-        }
+
+        StartCoroutine(ShootDelay());
     }
 
     // Update is called once per frame

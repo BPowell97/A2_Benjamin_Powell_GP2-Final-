@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 58156680179340488}
   - component: {fileID: 114371954492305948}
   - component: {fileID: 114723891486256808}
+  - component: {fileID: 114745323522720924}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -81,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1282402354286540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.83, y: -2.25, z: 0}
+  m_LocalPosition: {x: 10.48, y: -0.97, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4157805555805156}
@@ -167,6 +168,20 @@ MonoBehaviour:
   distance: 5
   enemy: {fileID: 1282402354286540}
   groundDetection: {fileID: 4157805555805156}
+--- !u!114 &114745323522720924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282402354286540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a951e46ca6522f14c9318ca1f3c0719d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFirePoint: {fileID: 4443137268971754}
+  bulletPrefab: {fileID: 1539632861300792, guid: 461ca2fa79560a34486ba8469b3cdc60,
+    type: 2}
 --- !u!212 &212164007961874858
 SpriteRenderer:
   m_ObjectHideFlags: 1
