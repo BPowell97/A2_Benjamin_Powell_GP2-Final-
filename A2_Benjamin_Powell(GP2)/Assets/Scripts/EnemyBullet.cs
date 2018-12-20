@@ -12,6 +12,8 @@ public class EnemyBullet : MonoBehaviour {
     void Start ()
     {
         rb.velocity = transform.right * speed;
+
+        //rb.velocity = transform.translate (Vector3.right * speed);
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)

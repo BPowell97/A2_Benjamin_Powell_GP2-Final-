@@ -6,7 +6,8 @@ public class GameManager : Singleton<GameManager>
 {
     private int _numCoins;
     public int score = 0;
-    
+    public int health = 100;
+
     public int NumCoins
     {
         get { return _numCoins; }
@@ -17,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     private void Start ()
     {
         score = 0;
+        health = 100;
 	}
 	
 	// Update is called once per frame
@@ -34,5 +36,11 @@ public class GameManager : Singleton<GameManager>
     {
         score += newScore;
         UIManager.Instance.UpdateScore();
+    }
+
+    public void HealthScore (int newHealth)
+    {
+        health -= newHealth;
+        UIManager.Instance.UpdateHealth();
     }
 }

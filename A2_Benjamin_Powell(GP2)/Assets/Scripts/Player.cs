@@ -11,10 +11,12 @@ public class Player : MonoBehaviour {
     public void PlayerTakeDamage (int playerDamage)
     {
         health -= playerDamage;
+        GameManager.Instance.HealthScore(playerDamage);
         if (health <= 0)
         {
             Die();
         }
+
     }
 
     void Die()
