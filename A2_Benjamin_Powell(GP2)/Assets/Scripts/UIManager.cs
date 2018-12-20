@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI healthText;
 
+    public GameObject pausePanel;
+    bool Paused = false;
+
     private void Awake()
     {
         Instance = this;
@@ -17,14 +20,46 @@ public class UIManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-		
-	}
+        pausePanel.gameObject.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
 		
 	}
+
+    private void FixedUpdate()
+    {
+
+        {
+            if (Input.GetKey("escape"))
+            {
+                if (Paused == true)
+                {
+                    Time.timeScale = 1.0f;
+                    pausePanel.gameObject.SetActive(false);
+                    
+                    Paused = false;
+                }
+                else
+                {
+                    Time.timeScale = 0.0f;
+                    pausePanel.gameObject.SetActive(true);
+                  
+                    Paused = true;
+                }
+            }
+        }
+    
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1.0f;
+        pausePanel.gameObject.SetActive(false);
+        
+    }
 
 
     public void UpdateScore()

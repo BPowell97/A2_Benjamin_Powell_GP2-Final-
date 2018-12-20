@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject pausePanel;
+
 
     public void PlayGame()
     {
@@ -15,7 +17,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(levelName);
     }
-	
+
+    public void Resume()
+    {
+        Time.timeScale = 1.0f;
+        pausePanel.gameObject.SetActive(false);
+
+    }
+
     public void QuitGame()
     {
         Debug.Log("QUIT");  // Hitting quit button in unity wont close application
