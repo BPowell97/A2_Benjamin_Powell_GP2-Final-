@@ -6,7 +6,7 @@ public class EnemyBullet : MonoBehaviour {
 
     public float speed = 20f;
     public Rigidbody2D rb;
-    public int playerDamage = 10;
+    public int playerDamage = 20;
 
     // Use this for initialization
     void Start ()
